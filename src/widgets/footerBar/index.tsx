@@ -4,18 +4,21 @@ import fb from '#/fb.svg'
 import twitter from '#/twitter.svg'
 import insta from '#/insta.svg'
 import linkedin from '#/Linkedin.svg'
+import tiktok from '#/tiktok.svg'
+import Link from 'next/link'
 
 const FooterBar = () => {
   return (
     <div className={styles.Footer}>
         <div className={styles.Social}>
-            <Image src={fb} className={styles.SocialLink} alt="FaceBook" />
-            <Image src={insta} className={styles.SocialLink} alt="Instagram" />
-            <Image src={twitter} className={styles.SocialLink} alt="Twitter" />
-            <Image src={linkedin} className={styles.SocialLink} alt="LinkedIn" />
+            <Link href="https://www.instagram.com/milena_luxury_art?igsh=YzBsdm9rMXpla2w5"><Image src={insta} className={styles.SocialLink} alt="Instagram" /></Link>
+            <Link href="https://www.tiktok.com/@milena_peony_artist?_t=8jDtKVY6UKb&_r=1"><Image src={tiktok} className={styles.SocialLink} alt="Tiktok" /></Link>
+            <Link href=""><Image src={fb} className={styles.SocialLink} alt="FaceBook" /></Link>
+            <Link href=""><Image src={twitter} className={styles.SocialLink} alt="Twitter" /></Link>
+            <Link href=""><Image src={linkedin} className={styles.SocialLink} alt="LinkedIn" /></Link>
         </div>
         <div className={styles.Copyright}>
-            Copyright &copy; 2023 All rights reserved
+            Copyright &copy; 2023-2024 All rights reserved
         </div>
         </div>
   )
