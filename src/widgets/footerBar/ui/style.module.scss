@@ -1,0 +1,15 @@
+.Footer {
+    @apply w-full flex flex-col justify-center items-center bg-body h-32 container
+}
+
+.Copyright {
+    @apply text-text text-xs
+}
+
+.Social {
+    @apply m-2 flex
+}
+
+.SocialLink {
+    @apply flex justify-center items-center m-3
+}

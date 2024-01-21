@@ -1,0 +1,26 @@
+.recentPosts {
+    @apply bg-primary flex justify-between items-center h-auto container py-5
+}
+
+.loaderBody {
+    @apply bg-body h-64 w-5/12 p-3 flex flex-col justify-around items-center rounded-xl
+}
+
+.loader {
+    @apply rounded-full h-20 w-20 bg-primary animate-ping
+}
+.post {
+    @apply bg-body h-auto w-5/12 p-3 flex flex-col justify-around items-center rounded-xl
+}
+
+.titlePost {
+    @apply text-text text-3xl text-center
+}
+
+.dataPost {
+    @apply text-text text-xl font-light
+}
+
+.descriptionPost{
+    @apply text-text
+}

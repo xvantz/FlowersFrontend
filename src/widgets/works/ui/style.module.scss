@@ -1,0 +1,42 @@
+.works {
+    @apply bg-body h-auto container pb-3
+}
+
+.work {
+    @apply flex bg-primary rounded-xl p-3 mb-2
+}
+
+.workLoader {
+    @apply flex bg-primary rounded-xl p-3 mb-2 h-40 justify-center items-center
+}
+.loader {
+    @apply rounded-full h-20 w-20 bg-body animate-ping
+}
+
+.workInfo {
+    @apply flex ml-3 justify-around flex-col
+}
+
+.textWorks {
+    @apply text-text font-bold text-2xl p-2
+}
+
+.workName {
+    @apply text-text font-bold text-xl
+}
+
+.workData {
+    @apply text-text font-light text-lg
+}
+
+.workSection {
+    @apply text-text font-light text-lg
+}
+
+.workDescription {
+    @apply text-text font-light text-lg leading-5
+}
+
+.workImage {
+    @apply rounded-xl max-w-xs max-h-48
+}

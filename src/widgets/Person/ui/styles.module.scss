@@ -1,0 +1,13 @@
+.Person {
+    @apply bg-body flex justify-between items-center h-auto container py-5 xl:py-20 lg:py-16
+}
+
+.Avatar {
+    @apply rounded-full
+}
+
+.title {
+    @apply text-text text-3xl sm:text-7xl
+}
+
+

@@ -1,0 +1,8 @@
+.NavigationBar {
+    height: 30%;
+    @apply text-text bg-primary flex self-end justify-end w-full h-10 items-center container
+}
+
+.NavLink {
+    @apply text-text p-3 mx-3 text-sm font-bold
+}

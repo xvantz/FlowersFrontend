@@ -1,0 +1,11 @@
+query Works{
+        works {
+            id
+            name
+            section
+            createdAt
+            updatedAt
+            image
+            description
+        }
+}

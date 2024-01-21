@@ -1,0 +1,24 @@
+query Posts{
+        posts {
+            id
+            name
+            Author
+            Description
+            section
+            createdAt
+            updatedAt
+        }
+
+}
+
+query lastPosts{
+    lastPosts {
+        id
+        name
+        Author
+        Description
+        section
+        createdAt
+        updatedAt
+}
+}
