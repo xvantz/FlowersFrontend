@@ -1,12 +1,13 @@
 'use client'
 
 import styles from './ui/style.module.scss'
-import Works1 from './public/Works1.png'
 import Image from 'next/image'
 import { useWorksQuery } from '@/graphql/graphql';
 import moment from 'moment';
 function Works() {
-    const { data, loading, error } = useWorksQuery();
+    const { data, loading, error } = useWorksQuery({
+        pollInterval: 30000,
+    });
     if (loading) {
         return (
             <div className={styles.works}>
@@ -19,7 +20,16 @@ function Works() {
             </div>
         )
       } else if (error) {
-        return <div>Error: {error.message}</div>;
+        return (
+            <div className={styles.works}>
+                <div className={styles.textWorks}>
+                    Featured Works
+                </div>
+                <div className={styles.workLoader}>
+                    <div className={styles.loader}></div>
+                </div>
+            </div>
+        )
       } else {
         return (
             <div className={styles.works}>

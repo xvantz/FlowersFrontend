@@ -4,8 +4,9 @@ import {useLastPostsQuery } from '@/graphql/graphql';
 import styles from './ui/styles.module.scss'
 import moment from 'moment';
 function Posts() {
-    const { data, loading, error } = useLastPostsQuery();
-    const date = moment.unix(1705334614).format('YYYY-MM-DD')
+    const { data, loading, error } = useLastPostsQuery({
+        pollInterval: 30000,
+    });
     if (loading) {
         return (
             <div className={styles.recentPosts}>
@@ -18,7 +19,16 @@ function Posts() {
             </div>
         )
       } else if (error) {
-        return <div>Error: {error.message}</div>;
+        return (
+            <div className={styles.recentPosts}>
+                    <div className={styles.loaderBody}>
+                         <div className={styles.loader}></div>
+                    </div>
+                    <div className={styles.loaderBody}>
+                         <div className={styles.loader}></div>
+                    </div>
+            </div>
+        )
       } else {
         return (
             <div className={styles.recentPosts}>
