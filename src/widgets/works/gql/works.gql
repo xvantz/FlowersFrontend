@@ -9,3 +9,15 @@ query Works{
             description
         }
 }
+
+query Work($id: ID!){
+    work(id: $id) {
+        id
+        name
+        section
+        createdAt
+        updatedAt
+        image
+        description
+    }
+}

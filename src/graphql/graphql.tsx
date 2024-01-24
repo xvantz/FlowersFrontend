@@ -62,12 +62,18 @@ export type IQuery = {
   readonly __typename?: 'Query';
   readonly lastPosts: ReadonlyArray<IPost>;
   readonly posts: ReadonlyArray<IPost>;
+  readonly work?: Maybe<IWork>;
   readonly works: ReadonlyArray<IWork>;
 };
 
 
 export type IQueryLastPostsArgs = {
   limit?: InputMaybe<Scalars['Int']['input']>;
+};
+
+
+export type IQueryWorkArgs = {
+  id: Scalars['ID']['input'];
 };
 
 export type IWork = {
@@ -95,6 +101,13 @@ export type IWorksQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type IWorksQuery = { readonly __typename?: 'Query', readonly works: ReadonlyArray<{ readonly __typename?: 'Work', readonly id: string, readonly name: string, readonly section: string, readonly createdAt: number, readonly updatedAt: number, readonly image: string, readonly description: string }> };
+
+export type IWorkQueryVariables = Exact<{
+  id: Scalars['ID']['input'];
+}>;
+
+
+export type IWorkQuery = { readonly __typename?: 'Query', readonly work?: { readonly __typename?: 'Work', readonly id: string, readonly name: string, readonly section: string, readonly createdAt: number, readonly updatedAt: number, readonly image: string, readonly description: string } | null };
 
 
 export const PostsDocument = gql`
@@ -232,3 +245,49 @@ export type WorksQueryHookResult = ReturnType<typeof useWorksQuery>;
 export type WorksLazyQueryHookResult = ReturnType<typeof useWorksLazyQuery>;
 export type WorksSuspenseQueryHookResult = ReturnType<typeof useWorksSuspenseQuery>;
 export type WorksQueryResult = Apollo.QueryResult<IWorksQuery, IWorksQueryVariables>;
+export const WorkDocument = gql`
+    query Work($id: ID!) {
+  work(id: $id) {
+    id
+    name
+    section
+    createdAt
+    updatedAt
+    image
+    description
+  }
+}
+    `;
+
+/**
+ * __useWorkQuery__
+ *
+ * To run a query within a React component, call `useWorkQuery` and pass it any options that fit your needs.
+ * When your component renders, `useWorkQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useWorkQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useWorkQuery(baseOptions: Apollo.QueryHookOptions<IWorkQuery, IWorkQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<IWorkQuery, IWorkQueryVariables>(WorkDocument, options);
+      }
+export function useWorkLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<IWorkQuery, IWorkQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<IWorkQuery, IWorkQueryVariables>(WorkDocument, options);
+        }
+export function useWorkSuspenseQuery(baseOptions?: Apollo.SuspenseQueryHookOptions<IWorkQuery, IWorkQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<IWorkQuery, IWorkQueryVariables>(WorkDocument, options);
+        }
+export type WorkQueryHookResult = ReturnType<typeof useWorkQuery>;
+export type WorkLazyQueryHookResult = ReturnType<typeof useWorkLazyQuery>;
+export type WorkSuspenseQueryHookResult = ReturnType<typeof useWorkSuspenseQuery>;
+export type WorkQueryResult = Apollo.QueryResult<IWorkQuery, IWorkQueryVariables>;
