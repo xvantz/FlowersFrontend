@@ -1,6 +1,6 @@
 'use client'
 import moment from 'moment';
-import {IWork, IWorkQuery, IWorkQueryVariables, useWorkQuery } from "@/graphql/graphql"
+import {IWork, IWorkQueryVariables, useWorkQuery } from "@/graphql/graphql"
 import styles from './ui/style.module.scss'
 import Image from 'next/image'
 export default function Work({id}: IWorkQueryVariables){
