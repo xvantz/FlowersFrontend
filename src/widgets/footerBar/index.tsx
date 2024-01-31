@@ -1,10 +1,10 @@
 import styles from './ui/style.module.scss'
 import Image from 'next/image'
-import fb from '#/fb.svg'
-import twitter from '#/twitter.svg'
-import insta from '#/insta.svg'
+import fb from '#/Fb.svg'
+import twitter from '#/Twitter.svg'
+import insta from '#/Insta.svg'
 import linkedin from '#/Linkedin.svg'
-import tiktok from '#/tiktok.svg'
+import tiktok from '#/Tiktok.svg'
 import Link from 'next/link'
 
 const FooterBar = () => {
