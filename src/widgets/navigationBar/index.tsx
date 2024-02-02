@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import styles from './ui/styles.module.scss'
-import global from '../../app/global.module.scss'
 
 export default function NavigationBar() {
     return (
