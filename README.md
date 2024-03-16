@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Проект "Арт Художник Milena Flower" (Frontend)
 
-## Getting Started
+Добро пожаловать в репозиторий **"Арт Художник Milena Flower"**! Этот фронтенд предназначен для представления творчества художника, отображения его работ, блога и других интересных материалов.
 
-First, run the development server:
+## Описание
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Проект "Арт Художник Milena Flower" построен на следующем стеке технологий:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js**: Универсальный фреймворк для рендеринга React-приложений на сервере и на клиенте.
+- **TypeScript**: Статически типизированный язык программирования, который облегчает разработку и поддержку кода.
+- **JavaScript**: Язык программирования, используемый для создания интерактивных веб-приложений.
+- **GraphQL**: Эффективный язык запросов для обмена данными между клиентом и сервером.
+- **Apollo Client**: Библиотека для управления состоянием и выполнения запросов к GraphQL API.
+- **SASS**: Препроцессор CSS для более удобной стилизации компонентов.
+- **Tailwind CSS**: Инструментарий для быстрой разработки пользовательских интерфейсов.
+- **Moment.js**: Библиотека для работы с датами и временем.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Функциональность
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Отображение работ художника.
+- Просмотр блога с интересными материалами.
+- Связь с художником через страницу контактов.
 
-## Learn More
+## Планы на будущее
 
-To learn more about Next.js, take a look at the following resources:
+В планах по реализации следующих функций:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Авторизация и регистрация**: Добавление системы аутентификации для пользователей.
+- **Прием оплат**: Возможность оплаты за произведения художника.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Установка и запуск
 
-## Deploy on Vercel
+1. Склонируйте репозиторий на свой компьютер.
+2. Установите зависимости с помощью команды:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npm install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Запустите приложение:
+
+    ```bash
+    npm start
+    ```
